@@ -2,9 +2,10 @@
 
     class Count
     {
-        function makeCount($search_word, $sentence)
-        {
-          return ucfirst($search_word, $sentence);
-        }
+      function contains($search_word, $sentence)
+      {
+          return strpos($sentence, $search_word) !== false;
+      }
+      // return ucfirst(1);
     }
 ?>
