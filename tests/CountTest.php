@@ -32,5 +32,19 @@
         //assert
         $this->assertEquals(0, $result);
       }
+
+      function test_makeCount_multipleWord()
+      {
+        //arrange
+        $test_Count = new Count;
+        $search_word = "and";
+        $sentence = "milk and eggs and budda";
+
+        //act
+        $result = $test_Count->contains($search_word, $sentence);
+
+        //assert
+        $this->assertEquals(2, $result);
+      }
     }
 ?>
